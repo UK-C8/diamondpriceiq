@@ -1,0 +1,15 @@
+{
+  "xgb_mape_overall": 0.0751,
+  "xgb_mape_gt2ct": 0.0919,
+  "lgb_mid_mape_overall": 0.0728,
+  "band_coverage_q05_q95": 0.8748,
+  "n_train": 35402,
+  "n_val": 7587,
+  "n_test": 7587,
+  "feature_count": 28,
+  "targets": {
+    "mape_overall_target": 0.12,
+    "mape_gt2ct_target": 0.18,
+    "band_coverage_target": 0.8
+  }
+}
