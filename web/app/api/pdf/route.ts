@@ -64,7 +64,6 @@ export async function POST(req: NextRequest) {
 
   let pdfBuffer: Buffer;
   try {
-    // @ts-expect-error — renderToBuffer accepts React elements; type mismatch is a library quirk
     pdfBuffer = await renderToBuffer(element);
   } catch (err) {
     console.error("[PDF] Render error:", err);
