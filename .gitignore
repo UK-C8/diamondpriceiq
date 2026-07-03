@@ -17,6 +17,11 @@ web/.env
 web/.env.local
 web/.env.*
 
+# Model training env
+model/.venv/
+model/venv/
+model/**/__pycache__/
+
 # Jupyter / model training
 model/**/*.ipynb_checkpoints
 *.ipynb_checkpoints/
