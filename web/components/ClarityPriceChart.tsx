@@ -78,9 +78,9 @@ export function ClarityPriceChart({ compact = false }: Props) {
               domain={["auto", "auto"]}
             />
             <RechartsTooltip
-              formatter={(v: unknown, name: string) => {
-                if (name === "Price range") return [`${fmt(Number((v as [number,number])[0]))} – ${fmt(Number((v as [number,number])[1]))}`, name];
-                return [fmt(v as number), name];
+              formatter={(v: unknown, name?: string | number) => {
+                if (name === "Price range") return [`${fmt(Number((v as [number,number])[0]))} – ${fmt(Number((v as [number,number])[1]))}`, String(name)];
+                return [fmt(v as number), String(name ?? "")];
               }}
               contentStyle={{
                 borderRadius: "0.75rem",
