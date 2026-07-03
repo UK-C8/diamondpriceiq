@@ -13,6 +13,9 @@ COPY api/ ./api/
 COPY model/artifacts/ ./model/artifacts/
 COPY model/src/ ./model/src/
 
+# Make data_pipeline importable regardless of MODEL_DIR value
+ENV PYTHONPATH="/app/model/src:${PYTHONPATH}"
+
 WORKDIR /app/api
 
 EXPOSE 8000
